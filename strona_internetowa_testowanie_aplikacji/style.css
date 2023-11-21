@@ -1,0 +1,45 @@
+body{
+    font-family: sans-serif;
+}
+
+
+#conteiner{
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: fit-content;
+}
+
+.block{
+    padding: 15px;
+}
+
+.block2{
+    
+    width: 35%;
+    float: left;
+}
+.block3{
+    float: left;
+    margin-right: 10%;
+    width: 35%;
+    padding-bottom: 20px;
+}
+.input{
+  width: 100%; 
+  padding: 10px; 
+  border-radius: 3px; 
+  border: 1px solid black;
+  float: left;
+}
+
+#submit_button{
+    margin-top: 100px;
+    background-color: rgb(83, 2, 206); 
+    text-align: center;
+    width: 75%;
+    padding: 15px;
+    margin-left: 2.5%;
+    border-radius: 3px;
+    cursor: pointer;
+}
