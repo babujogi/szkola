@@ -1,0 +1,64 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package sortowanie_przez_wybor_2;
+
+import java.util.Random;
+
+/**
+ *
+ * @author pt22czekajb
+ */
+public class Sortowanie_przez_wybor_2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int[] tab = new int[10];
+        int pomocnicza,pomocnicza2,j;
+        boolean flaga=true;
+        Random rand = new Random();
+        
+        for (int i = 0; i < 9; i++) {
+            tab[i]=rand.nextInt(-100,100);
+        }
+        
+        for (int i = 1; i < 10; i++) {
+            flaga=true;
+                j=i;
+                while(flaga){
+                    if(j-1<0){
+                        flaga=false;
+                        continue;
+                    }
+                    if(tab[j]>tab[j-1]){
+                        flaga=false;
+                    }
+                    if(tab[j]<tab[j-1]){
+                        pomocnicza=tab[j];
+                        tab[j]=tab[j-1];
+                        tab[j-1]=pomocnicza;
+                        j--;
+                    }
+                    
+                }
+            
+        }
+        
+        for(int x: tab){
+            System.out.print(x+" ");
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+}
