@@ -17,7 +17,7 @@ public class Sortowanie_przez_wybor_2 {
      */
     public static void main(String[] args) {
         int[] tab = new int[10];
-        int pomocnicza,pomocnicza2,j;
+        int pom,j;
         boolean flaga=true;
         Random rand = new Random();
         
@@ -26,25 +26,20 @@ public class Sortowanie_przez_wybor_2 {
         }
         
         for (int i = 1; i < 10; i++) {
-            flaga=true;
-                j=i;
-                while(flaga){
-                    if(j-1<0){
-                        flaga=false;
-                        continue;
-                    }
-                    if(tab[j]>tab[j-1]){
-                        flaga=false;
-                    }
-                    if(tab[j]<tab[j-1]){
-                        pomocnicza=tab[j];
-                        tab[j]=tab[j-1];
-                        tab[j-1]=pomocnicza;
-                        j--;
-                    }
-                    
-                }
-            
+           j=i;
+           pom=tab[i];
+           flaga=true;
+           while(flaga){
+               if(j<=0){
+                   flaga=false;
+                   continue;
+               }
+               if(tab[j-1]>pom){
+                   tab[j]=tab[j-1];
+                   j--;
+               }else break;
+           }
+           tab[j]=pom;   
         }
         
         for(int x: tab){
