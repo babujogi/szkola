@@ -1,4 +1,3 @@
-
 <?php 
 try{
     echo "Program do obliczania pierwiastka z liczby.\nProgram będzie wyświetlał liczba aż do momentu gdy będą one się powtarzały.\n";
@@ -16,7 +15,7 @@ try{
             $tablica_liczb[$i]=$liczba;
             continue;
         }
-        $tablica_liczb[$i]=1/2*($tablica_liczb[$i-1]+$liczba/$tablica_liczb[$i-1]);
+        $tablica_liczb[$i]=1/$stopien*(($stopien - 1)*$tablica_liczb[$i-1]+$liczba/pow($tablica_liczb[$i-1],$stopien-1));
         if($tablica_liczb[$i] == $tablica_liczb[$i-1]){  
             $pomocnicza = $i; 
             break;
